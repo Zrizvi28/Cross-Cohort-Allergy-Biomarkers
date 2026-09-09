@@ -1,0 +1,23 @@
+# jupyter cruft
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# OS cruft
+.DS_Store
+
+# python virtual environments
+*-env/
+venv/
+
+# vendored/compiled R dependency - not our code
+preprocessCore/
+
+# large or raw intermediate data - not committed here
+# (regenerate from raw IDATs/series matrices per notebooks 1-4 if needed)
+data/*.rds
+data/*.tar
+data/*.gz
+data/*.idat
+data/GSE189148_idats/
+data/GSE189148_suppl/
