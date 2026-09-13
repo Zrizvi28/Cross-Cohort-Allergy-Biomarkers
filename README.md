@@ -1,12 +1,12 @@
-# Food-Allergy-Biomarker-Statistical-Replication
+# Cross Cohort Food Allergy Biomarkers
 
-This project investigates possible genetic differences associated with food allergy using publicly available DNA methylation and RNA-seq datasets. Rather than focusing on classification, the project examines whether candidate biomarkers show consistent statistical and biological evidence across independent, age-differentiated cohorts.
+This project investigates possible genetic differences associated with food allergy using publicly available DNA methylation and RNA-seq datasets. Rather than focusing on classification, the project examines whether candidate biomarkers show consistent evidence across independent, age-differentiated cohorts.
 
 ## Motivation
 
 Food allergy results from a complex interaction between the immune system, genetics, and environmental factors. DNA methylation provides one way to investigate molecular changes that may be associated with allergic disease.
 
-I was interested in whether methylation signals in resting, naive CD4+ T cells from one food-allergy cohort could also be observed in an independent cohort with a different age group, and whether those signals could be supported by changes in gene expression. Most prior computational biomarker work in this space (e.g. Alag 2019, Kilicarslan 2025) validates a candidate on a single cohort. This project examines two cohorts and two types of genetic data.
+I was interested in whether methylation signals in resting, naive CD4+ T cells from one food-allergy cohort could also be observed in an independent cohort with a different age group, and whether those signals could be supported by changes in gene expression. Most prior biomarker work in this space (e.g. Alag 2019, Kilicarslan 2025) validates a candidate on a single cohort. This project examines two cohorts and two types of genetic data.
 
 ## Research Question
 
