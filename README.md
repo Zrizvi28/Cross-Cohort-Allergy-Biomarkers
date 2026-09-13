@@ -9,7 +9,7 @@ This project investigates molecular differences associated with food allergy usi
 
 Food allergy results from a complex interaction between the immune system, genetics, and environmental factors. DNA methylation provides one way to investigate molecular changes that may be associated with allergic disease.
 
-I was interested in whether methylation signals in resting, naive CD4+ T cells from one food-allergy cohort could also be observed in an independent cohort with a different age group, and whether those signals could be supported by changes in gene expression. Most prior computational biomarker work in this space (e.g. Alag 2019, Kilicarslan 2025) validates a candidate on a single cohort; this project treats cross-cohort and cross-omics replication as the standard to clear, not an afterthought.
+I was interested in whether methylation signals in resting, naive CD4+ T cells from one food-allergy cohort could also be observed in an independent cohort with a different age group, and whether those signals could be supported by changes in gene expression. Most prior computational biomarker work in this space (e.g. Alag 2019, Kilicarslan 2025) validates a candidate on a single cohort. This project examines two cohorts and two types of genetic data.
 
 ## Research Question
 
