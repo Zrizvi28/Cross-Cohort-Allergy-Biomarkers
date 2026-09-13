@@ -1,9 +1,6 @@
-# Food Allergy Biomarker Statistical Replication
-### Zamin Rizvi '28
+# Food-Allergy-Biomarker-Statistical-Replication
 
-## Objectives
-
-This project investigates molecular differences associated with food allergy using publicly available DNA methylation and RNA-seq datasets. Rather than focusing on classification, the project examines whether candidate biomarkers show consistent statistical and biological evidence across independent, age-differentiated cohorts, and whether a candidate that looks promising in isolation still looks promising once checked systematically against every other region in the genome.
+This project investigates possible genetic differences associated with food allergy using publicly available DNA methylation and RNA-seq datasets. Rather than focusing on classification, the project examines whether candidate biomarkers show consistent statistical and biological evidence across independent, age-differentiated cohorts.
 
 ## Motivation
 
@@ -24,30 +21,30 @@ The analysis uses three GEO datasets:
 ## Methods
 
 * Quality control: detection p-value filtering, funnorm normalization, probe filtering, PCA-based covariate screening (chip, array position, sex, scan date, allergy status) with sex-linked probes removed before re-testing
-* Sample identity verification: SNP-fingerprint correlation used to confirm a declared technical replicate and to check all samples for mislabeling
+* Sample identity verification: SNP-fingerprint correlation used to check all samples for mislabeling
 * Differential methylation: limma-family testing plus bumphunter regional analysis, with permutation-based FWER correction matched across both cohorts (same permutation count used in each)
 * Systematic genome-wide concordance scan: every bumphunter region in the infant cohort checked against every region in the adolescent cohort to see how many other loci show the same cross-cohort, direction-matched pattern, and where ISG15 ranks among them
-* Cross-omics ranking: candidates with methylation evidence checked against independent RNA-seq differential expression for supporting or contradicting evidence
-* Specificity control: the identical pipeline re-run on a 14-gene panel of unrelated interferon-response genes (380 probes total) as a negative control
+* Cross-omics ranking: candidates with methylation evidence checked against independent RNA-seq differential expression 
+* Specificity control: the identical pipeline re-run on a 14-gene panel of unrelated interferon-response genes (380 probes total) as a negative control to see if ISG15 is just part of general inflammation or a promising signal
 * Artifact screening: the single strongest genome-wide hit by raw p-value checked against known imprinted-locus behavior before being treated as a candidate
 
 ## Results
 
-### Sample-level quality control
-SNP-fingerprint correlation confirmed one declared technical replicate as genuine, and flagged real identity issues on further checking: GSM5695343 and GSM5695320/GSM5695319 showed SNP-correlation evidence inconsistent with their declared labels. Corrections are recorded in `data/GSE189148_sample_metadata_snp_annotated.csv`; the underlying GEO sample labels were left unmodified, and the correction is documented in the notebooks.
+### SNP check
+SNP-fingerprint correlation confirmed one declared technical replicate, and flagged a few possible identity issues: GSM5695343 and GSM5695320/GSM5695319 showed SNP-correlation evidence inconsistent with their declared labels. Corrections are recorded in `data/GSE189148_sample_metadata_snp_annotated.csv,` but the underlying GEO sample labels were left unmodified. Everything is in the notebooks.
 
 ### Systematic concordance scan
 A genome-wide scan (not a single-candidate test) found 4,392 direction-matched, cross-cohort concordant methylation regions. Within that full ranking:
 
-* ISG15 (cg08469540, cg25610492) ranks 215th of 4,392 on methylation evidence alone, with p=0.0175 (GSE114134) and p=0.00589 (GSE189148). The region did not survive family-wise error correction (FWER=1 in both cohorts), which is admittedly consistent with known EWAS power constraints at this sample size (Tsai & Bell, 2015: detecting even a 10% methylation difference at genome-wide significance requires roughly 112 subjects per group). Genome-wide significance was not a realistic bar for cohorts this size, which is why cross-cohort and cross-omics concordance act as the primary evidence for why ISG15 is a promising candidate for biomarker verification.
-* RGS14 ranks 18th of 4,392 on methylation alone, and is the strongest methylation-only candidate in the scan, though not previously reported in a food-allergy context.
-* Once cross-omics evidence (RNA-seq) is folded in, 1,584 candidates have both direction-matched methylation and RNA-seq support. On that combined ranking, RGS14 is 1st of 1,584 and ISG15 is 49th of 1,584 (top ~3%). ISG15's advantage is that its RNA-seq effect independently matches a previously published estimate (log₂FC ≈ −0.926 vs. a published −0.931), which is external replication that RGS14 does not yet have, since it has no prior food-allergy literature to compare against.
+* ISG15 (cg08469540, cg25610492) ranks 215th of 4,392 on methylation evidence alone, with p=0.0175 (GSE114134) and p=0.00589 (GSE189148). The region did not survive family-wise error correction (FWER=1 in both cohorts). However, this is consistent with EWAS power constraints at this sample size (Tsai & Bell, 2015 found that detecting even a 10% methylation difference at genome-wide significance requires roughly 112 subjects per group). Genome-wide significance was not a realistic bar for cohorts this size, which is why cross-cohort and cross-omics concordance act as the primary evidence for why ISG15 is a promising candidate for biomarker verification.
+* RGS14 ranks 18th of 4,392 on methylation alone, and is the strongest methylation-only candidate in the scan, though not previously reported in a food-allergy context, so ISG15 is the central focus.
+* Once cross-omics evidence (RNA-seq) is folded in, 1,584 candidates have both direction-matched methylation and RNA-seq support. On that combined ranking, RGS14 is 1st of 1,584 and ISG15 is 49th of 1,584 (top ~3%). 
 
 ### Specificity control
-The same pipeline run on 14 unrelated interferon-response genes (MX1, IFI44L, PARP9, IFI27, IFITM1, IFIT1, IFIT3, STAT1, IRF7, ISG20, OAS2, OAS3, PSMB8, EPSTI1 — 380 probes total) found no comparable cross-cohort signal in 13 of the 14 genes. IFIT1 was the one exception, with one probe reaching nominal significance in both cohorts.
+The same pipeline run on 14 unrelated interferon-response genes (MX1, IFI44L, PARP9, IFI27, IFITM1, IFIT1, IFIT3, STAT1, IRF7, ISG20, OAS2, OAS3, PSMB8, EPSTI1 — 380 probes total) found no comparable cross-cohort signal in 13 of the 14 genes. IFIT1 was the one exception, with one probe reaching nominal significance in both cohorts. However, IFIT1 did not show RNA-seq backing.
 
 ### Artifact screening
-The infant cohort's single strongest genome-wide hit by raw p-value (chr5, the nc886/VTRNA2-1 locus) was checked and excluded: it is a known imprinted, bimodally-methylated locus (methylation values cluster near ~0.2 and ~0.55, consistent with parent-of-origin imprinting rather than an allergy effect), confirmed unrelated to allergy status by Fisher's exact test (p=0.585).
+The infant cohort's single strongest genome-wide hit by raw p-value (chr5, the nc886/VTRNA2-1 locus) was checked and excluded because it was confirmed unrelated to allergy status by Fisher's exact test (p=0.585).
 
 ## Conclusions
 
@@ -79,4 +76,4 @@ Taken together, this project's contribution is as much methodological as biologi
 * Tsai, P.C. & Bell, J.T. (2015). *International Journal of Epidemiology* — power and sample size estimation for EWAS
 
 ## Project Status
-This repository is a focused continuation of my original food-allergy biomarker project. The classification component has been removed so that the project can focus on statistical biomarker analysis and biological interpretation.
+This repository is a focused continuation of my original food-allergy biomarker project. The classification component has been removed so that the project can focus on statistical biomarker analysis and biological interpretation. AI assistance was used to write the one script, debug code, and copy the necessary parts of the previous, more messy repo here.
