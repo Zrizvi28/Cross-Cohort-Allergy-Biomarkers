@@ -18,9 +18,9 @@ A genome-wide scan (not a single-candidate test) found 4,392 direction-matched, 
 The same pipeline run on 14 unrelated interferon-response genes (MX1, IFI44L, PARP9, IFI27, IFITM1, IFIT1, IFIT3, STAT1, IRF7, ISG20, OAS2, OAS3, PSMB8, EPSTI1 — 380 probes total) found no comparable cross-cohort signal in 13 of the 14 genes. IFIT1 was the one exception, with one probe reaching nominal significance in both cohorts. However, IFIT1 did not show RNA-seq backing, so ISG15 is in the clear.
 
 ## References
-* Alag, A. (2019). *PLOS ONE* — 18-CpG food allergy methylation signature (single-cohort validation)
-* Kilicarslan, S. et al. (2025). *Biomedicines* — ML classifiers on food allergy methylation data
-* Tsai, P.C. & Bell, J.T. (2015). *International Journal of Epidemiology* — power and sample size estimation for EWAS
+* Alag, A. (2019)
+* Kilicarslan, S. et al. (2025)
+* Tsai, P.C. & Bell, J.T. (2015)
 
 ## Project Info
 This repository is a focused continuation of my original food-allergy biomarker project. The classification component has been removed so that the project can focus on statistical biomarker analysis and biological interpretation. AI assistance was used to write the one script, debug code, and copy the necessary parts of the previous, more messy repo here.
