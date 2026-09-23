@@ -1,0 +1,5 @@
+"Gene","Methyl_Infant","Methyl_Adol","RegionP_Infant","RegionP_Adol","BestProbePadj_Infant","BestProbePadj_Adol","RNAseq_log2FC","RNAseq_padj","FWER_Infant","FWER_Adol","CombinedP_Fisher","CombinedP_Stouffer","Evidence_Type"
+"RGS14",0.524,0.37,"2.63e-04","1.10e-03",0.432,1,0.248,0.102,1,1,"5.32e-08","9.14e-09","Strongest internal evidence; unrelated-disease biology (IBD, lymphocyte activation) (GWAS study info as well)"
+"SUN1",0.35,1.075,"3.05e-03","2.36e-05",0.785,1,0.148,0.161,1,0.936,"9.81e-08","4.53e-08","Internal evidence plus some immune biology literature"
+"NINJ2",0.686,0.494,"1.90e-05","2.46e-04",0.557,1,0.197,0.447,0.408,1,"1.34e-07","1.46e-07","Internal evidence plus some immune biology literature"
+"ISG15",-0.223,-0.372,"1.76e-02","5.89e-03",0.038,1,-0.926,0.245,1,1,"2.15e-04","6.68e-05","Externally replicated (Imran et al. 2022), so primary reported finding"

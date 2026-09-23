@@ -1,0 +1,3 @@
+"probe_id","chr","position_hg19","n_infant","n_adolescent","logFC_infant","padj_infant","logFC_adolescent","padj_adolescent","region_p_infant","region_fwer_infant","region_p_adolescent","region_fwer_adolescent","rnaseq_log2FC","rnaseq_padj"
+"cg08469540","chr1",948625,"59 (39 allergic / 20 control)","43 (30 allergic / 13 control)",-0.267474241571093,0.0382767913354627,-0.379963494163842,0.999996931554574,0.0176013010163359,1,0.00589308864134393,1,-0.925921224779443,0.245340133221632
+"cg25610492","chr1",948814,"59 (39 allergic / 20 control)","43 (30 allergic / 13 control)",-0.179010746770556,0.384222661311214,-0.364460672394971,0.999996931554574,0.0176013010163359,1,0.00589308864134393,1,-0.925921224779443,0.245340133221632

@@ -21,3 +21,4 @@ data/*.gz
 data/*.idat
 data/GSE189148_idats/
 data/GSE189148_suppl/
+data/collaborator_results_table.csv
