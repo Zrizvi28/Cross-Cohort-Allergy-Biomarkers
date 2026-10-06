@@ -11,7 +11,7 @@ cat("Registered", getDoParWorkers(), "parallel workers\n")
 
 library(IlluminaHumanMethylationEPICanno.ilm10b4.hg19)
 
-data_dir <- '/home/ethan-xiao/food-allergy-biomarkers/data'
+data_dir <- here::here("data")
 
 ann <- getAnnotation(IlluminaHumanMethylationEPICanno.ilm10b4.hg19)
 mVals_189148_shared <- readRDS(file.path(data_dir, 'mVals_189148_shared.rds'))
