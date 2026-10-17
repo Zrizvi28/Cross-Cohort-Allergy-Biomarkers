@@ -1,6 +1,6 @@
 ## Primary Analysis: cross-cohort directional concordance
 
-*Hypothesis: Among the infant cohort's most strongly allergy-associated probes, the direction of effect in the adolescent cohort agrees more often than chance.
+**Hypothesis:** Among the infant cohort's most strongly allergy-associated probes, the direction of effect in the adolescent cohort agrees more often than chance.
 
 **Inputs:**
 - Infant M-values: data/mVals_114134_shared.rds (n = 59; 39 allergic, 20 control)
