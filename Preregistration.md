@@ -57,6 +57,37 @@ Next step if:
 Procedure: Rerun with sex added as a covariate in both cohorts.
 If p-value is no longer <0.05, must report as evidence that concordance may be due to sex-related signal.
 
+## Addition 2: Regional concordance check
+Date: 2026-10-18. Follows commit ea7018a (Addition 1) and the Addition 1 control runs.
+
+**Disclosure**
+Regional analyses were previously explored in notebook 5 (DMR and bumphunter), and their results (4,392 direction-matched regions; ISG15 ranked 215th) were seen before this addition. The analysis below uses annotation-defined regions, a different method from those exploratory analyses. No code for this analysis has been written or run.
+
+**Scope**
+Separate claim from the primary probe-level analysis. Comparison with the primary result is descriptive only; the two analyses share probes and are not independent evidence.
+
+**Hypothesis**
+Among the infant cohort's most strongly allergy-associated regions, the direction of effect in the adolescent cohort agrees more often than chance.
+
+**Region definitions** (EPIC annotation)
+- Primary set, promoters: probes annotated TSS1500 or TSS200 (UCSC_RefGene_Group), collapsed to one region per gene. Probes annotated to multiple genes count toward each gene.
+- Secondary set, islands: Island, N_Shore and S_Shore probes grouped by Islands_Name. Shelves excluded. Supporting only; no multiplicity correction.
+- Regions must contain at least 2 probes.
+
+**Procedure**
+1. All 751,107 shared probes (no masking)
+2. Region value = mean M-value of its probes, per sample.
+3. Infant: limma ~ allergy status; rank regions by p-value. Adolescent: limma ~ allergy status + scan date.
+4. For the top k regions, concordance = fraction with the same logFC sign in adolescents.
+5. Permute infant allergy labels 1,000 times (seed 42), repeating steps 3–4.
+6. One-sided p = (permutations with concordance ≥ observed + 1) / (1,000 + 1)
+
+**Primary test:** promoters, k = 100.
+**Decision rule:** p < 0.05 → regional shared signal detected. p ≥ 0.05 → no detectable cross-cohort regional concordance.
+**Sensitivity:** k = 50, 200, 500, for both sets. They do not affect the central claim.
+
+
+
 **References**
 Chen Y-a et al. (2013). Discovery of cross-reactive probes and polymorphic CpGs in the Illumina Infinium HumanMethylation450 microarray. Epigenetics. https://doi.org/10.4161/epi.23470
 Zhou W, Laird PW, Shen H (2017). Comprehensive characterization, annotation and innovative use of Infinium DNA methylation BeadChip probes. Nucleic Acids Research. https://doi.org/10.1093/nar/gkw967
