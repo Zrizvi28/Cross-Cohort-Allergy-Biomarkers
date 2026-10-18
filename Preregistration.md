@@ -37,24 +37,25 @@ Date: 2026-10-17 Primary result at time of writing: commit 9d199b7 (k = 100, con
 Controls were decided shortly after primary result. Adolescent sex distribution (25 M, 18 F) observed prior to analysis. 60% male for allergic, 57% for healthy controls. Infant cohort sex distribution not yet known.
 
 **Scope**
-Results do not change primary analysis but outcomes are reported here to educate proper intepretation.
+Results do not change primary analysis but outcomes are reported here to educate proper interpretation. If Positive Control does not pass, should be reported as potential low sensitivity of test and weaken previous result, or attributed to age-related biological differences. If Negative Control does not pass, evidence original test picked up sex differences and should be rerun with sex as a covariate.
 
 **1. Positive Control**
 Question: Can concordance test at k=100 detect a known shared signal across cohorts?
-Procedure: Identical to original, sex replacing allergy status.
+Procedure: Identical to original (scan date included as covariate), sex replacing allergy status.
 Probe set: Autosomal probes only, after also removing probes flagged as cross-reactive or SNP-affected (Zhou et al. 2017 EPIC MASK_general list; Chen et al. 2013). This narrower probe set differs from the primary analysis. However, this control only tests the method's sensitivity, not the primary result directly. A one-sided p<0.05 is a pass.
 
 **2. Negative Control**
 Question: Is the primary concordance at k=100 driven by sex-related rather than allergy-related outcomes?
-Procedure: Same as original analysis, but fit limma on sex status for the adolescent cohort and allergy for the infant. 
+Procedure: Same as positive control, but fit limma on sex status for the adolescent cohort and allergy for the infant. 
 Test: Two-sided p = (number of permutations with |concordance − null mean| ≥ |observed − null mean| + 1) / (1,000 + 1).
 Pass: Two-sided p>0.05
 
 **Sex-adjusted analysis**
 Next step if:
 1. Infant sex is unbalanced by allergy status, defined as difference of >=10 percentage points in % male between allergic and healthy controls
-2. Confound control is found to be significant
+2. Negative control is found to be significant
 Procedure: Rerun with sex added as a covariate in both cohorts.
+If p-value is no longer <0.05, must report as evidence biological signal does not persist across age groups.
 
 **References**
 Chen Y-a et al. (2013). Discovery of cross-reactive probes and polymorphic CpGs in the Illumina Infinium HumanMethylation450 microarray. Epigenetics. https://doi.org/10.4161/epi.23470
