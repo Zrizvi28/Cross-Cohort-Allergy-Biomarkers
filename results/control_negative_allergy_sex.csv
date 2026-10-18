@@ -1,0 +1,2 @@
+"test","k","n_probes","observed","null_mean","null_2.5","null_97.5","p","sides","n_perm","seed"
+"negative_allergy_sex",100,741453,0.3,0.48608,0.35,0.62,0.00699300699300699,2,1000,42
