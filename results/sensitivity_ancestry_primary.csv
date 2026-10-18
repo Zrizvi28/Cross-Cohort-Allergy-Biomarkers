@@ -1,0 +1,5 @@
+"analysis","k","n_probes","observed","null_mean","null_2.5","null_97.5","p_one_sided","n_perm","seed"
+"posthoc_ancestry_adjusted_primary",50,751107,0.62,0.519720000000001,0.36,0.68,0.130869130869131,1000,42
+"posthoc_ancestry_adjusted_primary",100,751107,0.61,0.51561,0.38,0.64,0.0809190809190809,1000,42
+"posthoc_ancestry_adjusted_primary",200,751107,0.58,0.513635,0.404875,0.615,0.10989010989011,1000,42
+"posthoc_ancestry_adjusted_primary",500,751107,0.564,0.51183,0.41995,0.60005,0.135864135864136,1000,42
