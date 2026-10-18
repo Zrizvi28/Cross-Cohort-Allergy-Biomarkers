@@ -55,7 +55,7 @@ Next step if:
 1. Infant sex is unbalanced by allergy status, defined as difference of >=10 percentage points in % male between allergic and healthy controls
 2. Negative control is found to be significant
 Procedure: Rerun with sex added as a covariate in both cohorts.
-If p-value is no longer <0.05, must report as evidence biological signal does not persist across age groups.
+If p-value is no longer <0.05, must report as evidence that concordance may be due to sex-related signal.
 
 **References**
 Chen Y-a et al. (2013). Discovery of cross-reactive probes and polymorphic CpGs in the Illumina Infinium HumanMethylation450 microarray. Epigenetics. https://doi.org/10.4161/epi.23470
