@@ -1,0 +1,24 @@
+sex_adjusted_primary: permutation 50  2026-10-18 09:25:48.941279
+sex_adjusted_primary: permutation 100  2026-10-18 09:28:15.260981
+sex_adjusted_primary: permutation 150  2026-10-18 09:44:32.777376
+sex_adjusted_primary: permutation 200  2026-10-18 09:46:46.495584
+sex_adjusted_primary: permutation 250  2026-10-18 09:48:55.467676
+sex_adjusted_primary: permutation 300  2026-10-18 09:51:05.770208
+sex_adjusted_primary: permutation 350  2026-10-18 10:03:53.712072
+sex_adjusted_primary: permutation 400  2026-10-18 10:06:06.400772
+sex_adjusted_primary: permutation 450  2026-10-18 10:08:16.127918
+sex_adjusted_primary: permutation 500  2026-10-18 10:10:25.04646
+sex_adjusted_primary: permutation 550  2026-10-18 10:12:28.906116
+sex_adjusted_primary: permutation 600  2026-10-18 10:14:43.742005
+sex_adjusted_primary: permutation 650  2026-10-18 10:17:12.213409
+sex_adjusted_primary: permutation 700  2026-10-18 10:19:12.789052
+sex_adjusted_primary: permutation 750  2026-10-18 10:21:26.4667
+sex_adjusted_primary: permutation 800  2026-10-18 10:23:38.468083
+sex_adjusted_primary: permutation 850  2026-10-18 10:25:55.32889
+sex_adjusted_primary: permutation 900  2026-10-18 10:28:12.135667
+sex_adjusted_primary: permutation 950  2026-10-18 13:03:49.475386
+sex_adjusted_primary: permutation 1000  2026-10-18 13:50:54.437154
+                  test   k n_probes observed null_mean null_2.5 null_97.5
+1 sex_adjusted_primary 100   751107     0.66   0.51466     0.38      0.64
+           p sides n_perm seed
+1 0.01898102     1   1000   42
