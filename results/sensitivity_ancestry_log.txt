@@ -1,0 +1,31 @@
+Ancestry covariate: ancestry_strata:ch1 (1, 2)
+permutation 50  2026-10-18 17:11:54.530976
+permutation 100  2026-10-18 17:14:15.865205
+permutation 150  2026-10-18 17:16:38.536181
+permutation 200  2026-10-18 17:19:02.722611
+permutation 250  2026-10-18 17:21:20.572651
+permutation 300  2026-10-18 17:23:45.776907
+permutation 350  2026-10-18 17:26:22.533441
+permutation 400  2026-10-18 17:28:53.065498
+permutation 450  2026-10-18 17:31:26.925523
+permutation 500  2026-10-18 17:33:47.803027
+permutation 550  2026-10-18 17:36:03.985408
+permutation 600  2026-10-18 17:38:23.704678
+permutation 650  2026-10-18 17:40:47.376293
+permutation 700  2026-10-18 17:43:16.72014
+permutation 750  2026-10-18 17:45:55.109056
+permutation 800  2026-10-18 17:48:22.319703
+permutation 850  2026-10-18 17:50:55.64782
+permutation 900  2026-10-18 17:53:34.889212
+permutation 950  2026-10-18 17:55:55.470925
+permutation 1000  2026-10-18 17:58:09.973966
+                          analysis   k n_probes observed null_mean null_2.5
+ posthoc_ancestry_adjusted_primary  50   751107    0.620  0.519720 0.360000
+ posthoc_ancestry_adjusted_primary 100   751107    0.610  0.515610 0.380000
+ posthoc_ancestry_adjusted_primary 200   751107    0.580  0.513635 0.404875
+ posthoc_ancestry_adjusted_primary 500   751107    0.564  0.511830 0.419950
+ null_97.5 p_one_sided n_perm seed
+   0.68000  0.13086913   1000   42
+   0.64000  0.08091908   1000   42
+   0.61500  0.10989011   1000   42
+   0.60005  0.13586414   1000   42

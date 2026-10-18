@@ -1,0 +1,49 @@
+
+== Infant ancestry_strata:ch1 by allergy status ==
+          ancestry
+allergy     1  2
+  control  19  1
+  allergic 32  7
+          ancestry
+allergy       1    2
+  control  95.0  5.0
+  allergic 82.1 17.9
+Fisher's exact p (descriptive): 0.245 
+Masked probe set: 741453 of 751107
+
+== MASK_general among primary top 100 ==
+       concordant
+masked  FALSE TRUE
+  FALSE    33   67
+permutation 50  2026-10-18 16:04:34.307266
+permutation 100  2026-10-18 16:07:15.986805
+permutation 150  2026-10-18 16:09:56.783917
+permutation 200  2026-10-18 16:12:17.025867
+permutation 250  2026-10-18 16:14:41.522404
+permutation 300  2026-10-18 16:17:11.839209
+permutation 350  2026-10-18 16:20:01.017951
+permutation 400  2026-10-18 16:22:48.896262
+permutation 450  2026-10-18 16:25:20.336107
+permutation 500  2026-10-18 16:28:03.744352
+permutation 550  2026-10-18 16:30:25.495765
+permutation 600  2026-10-18 16:33:12.191914
+permutation 650  2026-10-18 16:35:36.58976
+permutation 700  2026-10-18 16:38:20.134369
+permutation 750  2026-10-18 16:41:00.852263
+permutation 800  2026-10-18 16:43:31.350755
+permutation 850  2026-10-18 16:45:49.467895
+permutation 900  2026-10-18 16:48:01.549589
+permutation 950  2026-10-18 16:50:29.861732
+permutation 1000  2026-10-18 16:53:06.862822
+
+== Primary test on masked probes (POST HOC) ==
+               analysis   k n_probes observed null_mean null_2.5 null_97.5
+ posthoc_masked_primary  50   741453    0.640  0.520580  0.36000     0.680
+ posthoc_masked_primary 100   741453    0.670  0.517000  0.38000     0.640
+ posthoc_masked_primary 200   741453    0.590  0.513910  0.40500     0.620
+ posthoc_masked_primary 500   741453    0.576  0.511828  0.41995     0.598
+ p_one_sided n_perm seed
+  0.08491508   1000   42
+  0.01398601   1000   42
+  0.07992008   1000   42
+  0.08291708   1000   42
