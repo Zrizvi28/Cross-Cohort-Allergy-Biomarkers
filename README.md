@@ -20,7 +20,9 @@ All parameters and methodology were fixed ahead of each test in Pregistration.md
 | Positive control (sex vs sex) | 0.96 | 0.502 | < 0.001 | Pass | [control_positive_sex_sex.csv](results/control_positive_sex_sex.csv) |
 | Negative control (allergy vs sex) | 0.30 | 0.486 | 0.007 (two-sided) | Significant | [control_negative_allergy_sex.csv](results/control_negative_allergy_sex.csv) |
 | Sex-adjusted primary | 0.66 | 0.515 | 0.019 | Robust to sex | [control_sex_adjusted_primary.csv](results/control_sex_adjusted_primary.csv) |
-| Regional (promoters, k = 100) | | | | *Not yet run* | |
+| Regional (promoters, k = 100) | 0.56 | 0.499 | 0.21 | No detectable regional concordance | [regional_concordance.csv](results/regional_concordance.csv) |
+| Masked probes (post hoc) | 0.67 | 0.517 | 0.014 | Robust | [sensitivity_masked_primary.csv](results/sensitivity_masked_primary.csv) |
+| Ancestry-adjusted (post hoc) | 0.61 | 0.516 | 0.081 | **Attenuated** | [sensitivity_ancestry_primary.csv](results/sensitivity_ancestry_primary.csv) |
 
 All runs used 1000 permuations of infant labels with seed 42. The full methods and decision rules are in [Preregistration.md](Preregistration.md).
 
@@ -52,7 +54,25 @@ Both controls use autosomal probes with the Zhou et al. MASK_general list remove
 
 ### Addition 2: regional concordance
  
-This analysis is preregistered: promoters (TSS1500 + TSS200, one region per gene) are the primary set, CpG islands with shores are the secondary set, and k = 100. It has not been run yet.
+Preregistered: promoters (TSS1500 + TSS200, one region per gene, ≥ 2 probes) as the primary set; CpG islands with shores as the secondary set.
+
+| Set | k | Regions | Observed | Null mean | One-sided p |
+|:---|---:|---:|---:|---:|---:|
+| **Promoters** | **100** | 22,334 | **0.56** | 0.499 | **0.21** |
+| Islands | 100 | 25,216 | 0.56 | 0.497 | 0.21 |
+
+**Result:** no detectable cross-cohort regional concordance. Sensitivity values of k (50/200/500) were also non-significant for both sets ([regional_concordance.csv](results/regional_concordance.csv)). ISG15's promoter ranked 117th of 22,334 in infants, compared with 2nd of 751,107 for its strongest single probe. This is consistent with a localized rather than region-wide difference (post hoc interpretation).
+
+### Post hoc sensitivity analyses (not preregistered)
+
+| Check | Result | Interpretation |
+|:---|:---|:---|
+| Masked probes in the top 100 | 0 of 100 flagged by MASK_general | No top probe is SNP-affected or cross-reactive. [top100_masked_flags.csv](results/top100_masked_flags.csv) |
+| Primary rerun on masked probes | 0.67, p = 0.014 | **Robust** to removing SNP-affected and cross-reactive probes. |
+| Infant ancestry × allergy | Stratum 2: 17.9% (allergic) vs 5.0% (control); Fisher p = 0.25, n = 8 in stratum 2 | Uneven, and too few infants in stratum 2 to test reliably. [infant_ancestry_by_allergy.csv](results/infant_ancestry_by_allergy.csv) |
+| Primary with infant ancestry covariate | 0.61, p = 0.081 | **Attenuated:** part of the concordance likely reflects ancestry-related methylation (for example meQTLs) rather than allergy. |
+
+Both analyses were committed to the repository before they were run. 
 
 ## Exploratory analyses (not preregistered)
  
@@ -63,12 +83,16 @@ The earlier work in `notebooks/` included bumphunter and DMR scans, a genome-wid
 * RGS14 ranks 18th of 4,392 on methylation alone, and is the strongest methylation-only candidate in the scan (but no individual probes cleared significance in either cohort, so not the primary result)
 * Once cross-omics evidence (RNA-seq) is folded in, 1,584 candidates have both direction-matched methylation and RNA-seq support
 
+Their outputs are in [`results/exploratory/`](results/exploratory/). The notebooks predate the repository reorganization, so their file paths may be out of date.
+
 ## Limitations
  
 - The cohorts are small (59 and 43 samples), and no individual probe replicates at FDR < 0.05 in adolescents.
 - Infant effect sizes for the top 100 are probably inflated, because the probes were selected for their strong infant signal (the winner's curse).
 - The two cohorts differ in age, recruitment and processing, so concordance across them is a conservative test.
 - The exploratory analyses came before the preregistration.
+- The primary result was attenuated after adjustment for infant ancestry (0.61, p = 0.081), and adolescent ancestry data are unavailable, so ancestry-related confounding cannot be ruled out.
+- The result is significant at the preregistered k = 100 but not at k = 50, 200 or 500 (p ≈ 0.08–0.09).
   
 ## References
  
@@ -79,4 +103,4 @@ The earlier work in `notebooks/` included bumphunter and DMR scans, a genome-wid
 - Smyth GK et al. limma User's Guide. https://bioconductor.org/packages/release/bioc/vignettes/limma/inst/doc/usersguide.pdf
 - Alag A (2019); Kilicarslan S et al. (2025); Tsai PC & Bell JT (2015)
 
-**AI disclosure:** AI assistance (Claude, Anthropic) was used to edit `scripts/concordance_test.R`, `scripts/sex_controls.R` and `scripts/top100_table.R`, to debug code, and to help structure the preregistration and this README. The research questions, analysis parameters, preregistered decision rules and interpretation are the author's.
+**AI disclosure:** AI assistance (Claude, Anthropic) was used to help draft the scripts in '/scripts,' to debug code, and to help structure the preregistration and this README. The research questions, analysis parameters, preregistered decision rules and interpretation are the author's.
