@@ -1,0 +1,27 @@
+Using mask file: EPIC.hg38.mask.tsv.gz
+Using mask column: M_general
+Masked autosomal probe set: 741453 of 751107
+positive_sex_sex: permutation 50  2026-10-18 00:38:51.822374
+positive_sex_sex: permutation 100  2026-10-18 00:42:04.650111
+positive_sex_sex: permutation 150  2026-10-18 00:45:44.558289
+positive_sex_sex: permutation 200  2026-10-18 01:20:52.819289
+positive_sex_sex: permutation 250  2026-10-18 01:23:46.368545
+positive_sex_sex: permutation 300  2026-10-18 01:26:06.360316
+positive_sex_sex: permutation 350  2026-10-18 01:28:50.532173
+positive_sex_sex: permutation 400  2026-10-18 02:02:23.40745
+positive_sex_sex: permutation 450  2026-10-18 02:39:49.148982
+positive_sex_sex: permutation 500  2026-10-18 02:42:51.041018
+positive_sex_sex: permutation 550  2026-10-18 02:45:40.938182
+positive_sex_sex: permutation 600  2026-10-18 02:48:18.359588
+positive_sex_sex: permutation 650  2026-10-18 02:51:04.35083
+positive_sex_sex: permutation 700  2026-10-18 02:53:48.51973
+positive_sex_sex: permutation 750  2026-10-18 02:56:40.813671
+positive_sex_sex: permutation 800  2026-10-18 02:59:26.649702
+positive_sex_sex: permutation 850  2026-10-18 03:02:17.785774
+positive_sex_sex: permutation 900  2026-10-18 03:05:02.244063
+positive_sex_sex: permutation 950  2026-10-18 03:07:49.734981
+positive_sex_sex: permutation 1000  2026-10-18 03:10:35.997098
+              test   k n_probes observed null_mean null_2.5 null_97.5
+1 positive_sex_sex 100   741453     0.96   0.50229     0.36      0.64
+            p sides n_perm seed
+1 0.000999001     1   1000   42

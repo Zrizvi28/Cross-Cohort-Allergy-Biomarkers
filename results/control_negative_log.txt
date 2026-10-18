@@ -1,0 +1,27 @@
+Using mask file: EPIC.hg38.mask.tsv.gz
+Using mask column: M_general
+Masked autosomal probe set: 741453 of 751107
+negative_allergy_sex: permutation 50  2026-10-18 00:39:17.967659
+negative_allergy_sex: permutation 100  2026-10-18 00:42:32.362094
+negative_allergy_sex: permutation 150  2026-10-18 00:57:12.779098
+negative_allergy_sex: permutation 200  2026-10-18 01:21:06.8902
+negative_allergy_sex: permutation 250  2026-10-18 01:23:52.745089
+negative_allergy_sex: permutation 300  2026-10-18 01:26:14.419942
+negative_allergy_sex: permutation 350  2026-10-18 01:29:06.812128
+negative_allergy_sex: permutation 400  2026-10-18 02:02:37.492269
+negative_allergy_sex: permutation 450  2026-10-18 02:40:04.94785
+negative_allergy_sex: permutation 500  2026-10-18 02:43:00.224147
+negative_allergy_sex: permutation 550  2026-10-18 02:45:32.641837
+negative_allergy_sex: permutation 600  2026-10-18 02:48:19.930373
+negative_allergy_sex: permutation 650  2026-10-18 02:51:05.827406
+negative_allergy_sex: permutation 700  2026-10-18 02:53:54.032267
+negative_allergy_sex: permutation 750  2026-10-18 02:56:48.422572
+negative_allergy_sex: permutation 800  2026-10-18 02:59:38.454729
+negative_allergy_sex: permutation 850  2026-10-18 03:02:29.663565
+negative_allergy_sex: permutation 900  2026-10-18 03:05:16.930371
+negative_allergy_sex: permutation 950  2026-10-18 03:08:07.473416
+negative_allergy_sex: permutation 1000  2026-10-18 03:10:47.43225
+                  test   k n_probes observed null_mean null_2.5 null_97.5
+1 negative_allergy_sex 100   741453      0.3   0.48608     0.35      0.62
+            p sides n_perm seed
+1 0.006993007     2   1000   42
