@@ -26,3 +26,7 @@ data/collaborator_results_table.csv
 # large matrices exported by notebook 4 (cells 41-42)
 data/raw_*.csv
 data/combat_noMod.csv
+
+# large matrices exported by notebook 4 (cells 41-42)
+data/raw_*.csv
+data/combat_noMod.csv
