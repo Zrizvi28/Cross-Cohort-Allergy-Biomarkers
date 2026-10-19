@@ -11,7 +11,7 @@ Tests whether DNA methylation differences associated with allergy in naive CD4 c
 751,107 autosomal probes are shared by both methylation cohorts.
 
 ## Preregistration
-All parameters and methodology were fixed ahead of each test in Pregistration.md
+All parameters and methodology were fixed ahead of each test in Preregistration.md
 
 ## Results
 | Analysis | Concordance | Null mean | p | Outcome | Result file |
